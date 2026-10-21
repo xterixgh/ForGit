@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ForGit.Views.LoginWindow"
+        Title="Авторизация"
+        Width="400" SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+    <StackPanel Margin="24" Spacing="8">
+        <TextBlock Text="Вход" FontSize="24" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+
+        <TextBlock Text="Email"/>
+        <TextBox x:Name="EmailBox"/>
+
+        <TextBlock Text="Пароль"/>
+        <TextBox x:Name="PasswordBox" PasswordChar="●"/>
+
+        <TextBlock x:Name="ErrorText" Foreground="Red" TextWrapping="Wrap" IsVisible="False"/>
+
+        <Button x:Name="LoginButton" Content="Войти" HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center" Margin="0,8,0,0" Click="Login_Click" IsDefault="True"/>
+        <Button Content="Регистрация" HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center" Click="Register_Click"/>
+    </StackPanel>
+</Window>
