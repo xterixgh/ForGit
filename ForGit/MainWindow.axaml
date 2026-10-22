@@ -9,6 +9,7 @@
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="12">
         <TextBlock x:Name="WelcomeText" FontSize="24" HorizontalAlignment="Center"/>
         <TextBlock x:Name="RoleText" HorizontalAlignment="Center"/>
+        <Button Content="Роли" HorizontalAlignment="Center" Click="Roles_Click"/>
         <Button Content="Выйти" HorizontalAlignment="Center" Click="Logout_Click"/>
     </StackPanel>
 </Window>

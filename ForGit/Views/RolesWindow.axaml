@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ForGit.Views.RolesWindow"
+        Title="Роли" Width="400" Height="540"
+        WindowStartupLocation="CenterOwner" CanResize="False">
+    <Grid Margin="24" RowDefinitions="Auto,*,Auto" RowSpacing="8">
+        <TextBlock Text="Роли" FontSize="24" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+        <ListBox Grid.Row="1" x:Name="RolesList" SelectionChanged="Role_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate><TextBlock Text="{ReflectionBinding Name}"/></DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Row="2" x:Name="EditorPanel" Spacing="8">
+            <TextBlock Text="Название роли"/>
+            <TextBox x:Name="NameBox"/>
+            <TextBlock x:Name="ErrorText" Foreground="Red" TextWrapping="Wrap" IsVisible="False"/>
+            <Button Content="Сохранить" Click="Save_Click" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button Content="Новая роль" Click="New_Click" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button x:Name="DeleteButton" Content="Удалить выбранную роль" Click="Delete_Click" IsEnabled="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button Content="Обновить" Click="Refresh_Click" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>

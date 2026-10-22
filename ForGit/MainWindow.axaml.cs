@@ -22,4 +22,9 @@ public partial class MainWindow : Window
     {
         App.SwitchWindow(this, new LoginWindow());
     }
+
+    private async void Roles_Click(object? sender, RoutedEventArgs e)
+    {
+        await new RolesWindow().ShowDialog(this);
+    }
 }
